@@ -1,1 +1,2 @@
-# NewItem-ChangeItem.02
+# NewItem-ChangeItem
+ Aplikasi Add New Items & Change Master Items

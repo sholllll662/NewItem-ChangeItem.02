@@ -1,0 +1,31 @@
+<div class='col-sm-4'>
+                   <select name='b' class='form-control'>
+                    <option value='' selected>Pilih level</option>
+                    <?php 
+                    $tampil = mysqli_query($koneksi, "SELECT * FROM level where id_level='3' ORDER BY id_level ");
+                    while($r=mysqli_fetch_array($tampil))
+                    {
+                      echo "<option value='".$r['id_level']."' selected>".$r['level']."</option>";
+                    }
+                    ?>
+                  </select>
+                </div>
+
+
+<div class='form-group'>
+                  <label class='col-sm-2 control-label'>Alamat :</label>
+                  <div class='col-sm-4'>
+                    <textarea class='form-control' name='h' placeholder='Tuliskan Alamat Rumah'></textarea>
+                  </div>
+
+
+
+
+                  SELECT a.part_no, a.part_name, a.customer, a.reason, a.pic, a.material_rmcode, a.rm_stock, a.rm_stockJ, a.rm_weight, a.weight_consum, a.rm_use, a.proces1, a.proces2, a.proces3, a.proces4, a.proces5, a.proces6, a.proces7, a.proces8, a.proces9, a.proces10, a.proces11, a.proces12, a.unit_price, a.reason_price, a.part_stock, a.amalgamasi, a.part_stockJ, a.unit_length, a.item_pcs, a.std_packing, a.ct, a.weight_part, a.dept, a.model, a.id_level, a.lampiran, a.keputusan, a.tgleng, a.tglspveng, a.tglqc, a.tglppic, a.tglgm, a.cutoffprod, a.cutoffsales, c.part_no, c.part_name, c.customer, c.reason, c.pic, c.material_rmcode, c.rm_stock, c.rm_stockJ, c.rm_weight, c.weight_consum, c.rm_use, c.proces1, c.proces2, c.proces3, c.proces4, c.proces5, c.proces6, c.proces7, c.proces8, c.proces9, c.proces10, c.proces11, c.proces12, c.unit_price, c.reason_price, c.part_stock, c.amalgamasi, c.part_stockJ, c.unit_length, c.item_pcs, c.std_packing, c.ct, c.weight_part, c.dept, c.model, c.id_level, c.lampiran, c.keputusan, c.tgleng, c.tglspveng, c.tglqc, c.tglppic, c.tglgm, c.cutoffprod, c.cutoffsales FROM itembc a INNER JOIN itemac c ON a.part_no = c.part_no
+
+
+
+
+
+
+                  "SELECT a.part_no as part_nobc, a.part_name as part_namebc, a.customer as customerbc, a.reason as reasonbc, a.pic as picbc, a.material_rmcode as material_rmcodebc, a.rm_stock as rm_stockbc, a.rm_stockJ as rm_stockJbc, a.rm_weight as rm_weightbc, a.weight_consum as weight_consumbc, a.rm_use as rm_usebc, a.proces1 as proces1bc, a.proces2 as proces2bc, a.proces3 as proces3bc, a.proces4 as proces4bc, a.proces5 as proces5bc, a.proces6 as proces6bc, a.proces7 as proces7bc, a.proces8 as proces8bc, a.proces9 as proces9bc, a.proces10 as proces10bc, a.proces11 as proces11bc, a.proces12 as proces12bc, a.unit_price as unit_pricebc, a.reason_price as reason_pricebc, a.part_stock as part_stockbc, a.amalgamasi as amalgamasibc, a.part_stockJ as part_stockJbc, a.unit_length as unit_lengthbc, a.item_pcs as item_pcsbc, a.std_packing as std_packingbc, a.ct as ctbc, a.weight_part as weight_partbc, a.dept as deptbc, a.model as modelbc, a.id_level as id_levelbc, a.lampiran as lampiranbc, a.keputusan as keputusanbc, a.tgleng as tglengbc, a.tglspveng as tglspvengbc, a.tglqc as tglqcbc, a.tglppic as tglppicbc, a.tglgm as tglgmbc, a.cutoffprod as cutoffprodbc, a.cutoffsales as cutoffsalesbc, c.part_no as part_noac, c.part_name as part_nameac, c.customer as customerac, c.reason as reasonac, c.pic as picac, c.material_rmcode as material_rmcodeac, c.rm_stock as rm_stockac, c.rm_stockJ as rm_stockJac, c.rm_weight as rm_weightac, c.weight_consum as weight_consumac, c.rm_use as rm_useac, c.proces1 as proces1ac, c.proces2 as proces2ac, c.proces3 as proces3ac, c.proces4 as proces4ac, c.proces5 as proces5ac, c.proces6 as proces6ac, c.proces7 as proces7ac, c.proces8 as proces8ac, c.proces9 as proces9ac, c.proces10 as proces10ac, c.proces11 as proces11ac, c.proces12 as proces12ac, c.unit_price as unit_priceac, c.reason_price as reason_priceac, c.part_stock as part_stockac, c.amalgamasi as amalgamasiac, c.part_stockJ as part_stockJac, c.unit_length as unit_lengthac, c.item_pcs as item_pcsac, c.std_packing as std_packingac, c.ct as ctac, c.weight_part as weight_partac, c.dept as deptac, c.model as modelac, c.id_level as id_levelac, c.lampiran as lampiranac, c.keputusan as keputusanac, c.tgleng as tglengac, c.tglspveng as tglspvengac, c.tglqc as tglqcac, c.tglppic as tglppicac, c.tglgm as tglgmac, c.cutoffprod as cutoffprodac, c.cutoffsales as cutoffsalesac FROM itembc a INNER JOIN itemac c ON a.part_no = c.part_no WHERE c.id='$_GET[id]'"
